@@ -1,5 +1,0 @@
---- a/src/control.c
-+++ b/src/control.c
-@@
--    int threshold = 0;
-+    int threshold = compute_threshold(sensor_value);
