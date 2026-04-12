@@ -1,0 +1,20 @@
+{
+  "modifiable_files": [
+    "src/control.c",
+    "include/control.h"
+  ],
+  "forbidden_functions": [
+    "malloc"
+  ],
+  "allowed_libraries": [
+    "cmsis",
+    "hal"
+  ],
+  "max_ram_bytes": 65536,
+  "required_validation": [
+    "compile",
+    "lint",
+    "unit_test"
+  ],
+  "required_promotion_state": "candidate"
+}

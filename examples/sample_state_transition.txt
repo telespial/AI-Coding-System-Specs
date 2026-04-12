@@ -1,0 +1,15 @@
+Golden State
+    ↓ clone
+Working State
+    ↓ generate
+Candidate State
+    ↓ validate
+Promoted State
+    ↓ archive
+Golden State (new)
+
+On failure:
+
+Candidate State
+    ↓ fail
+Rollback to Recovery or Failsafe

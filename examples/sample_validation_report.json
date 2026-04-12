@@ -1,0 +1,12 @@
+{
+  "compile": "pass",
+  "lint": "pass",
+  "tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "warnings": [
+    "No size regression detected"
+  ],
+  "summary": "Patch validated successfully"
+}
