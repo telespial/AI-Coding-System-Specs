@@ -38,11 +38,11 @@ If you can’t see the change, you can’t trust the change.
 
 AICS should establish explicit restore points such as:
 
-* **golden** — known good promoted baseline
-* **working** — active editable state
-* **candidate** — newly generated state pending validation
-* **failsafe** — rollback-safe fallback state
-* **recovery** — most recent restorable stable state
+* **golden** - known good promoted baseline
+* **working** - active editable state
+* **candidate** - newly generated state pending validation
+* **failsafe** - rollback-safe fallback state
+* **recovery** - most recent restorable stable state
 
 Skipping state control is where things break.
 
