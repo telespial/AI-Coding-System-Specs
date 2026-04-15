@@ -1,67 +1,104 @@
 # AI Integrated Coding System (AICS)
 
-## A Structured, Reviewable Framework for AI-Assisted Code Generation in Embedded Systems
+## A Controlled System for Reviewable AI-Assisted Code Generation in Embedded Projects
 
 Proposed by: Richard Haberkern  
 Contact: rmhaberkern@gmail.com
 
 Free for evaluation. Commercial use requires permission. See license.md for more information.
 
-Part of the [EmbeddedX platform](https://github.com/telespial/EmbeddedX-Specs).
+Part of the EmbeddedX platform:
+https://github.com/telespial/EmbeddedX-Specs
 
 * * *
 
 ## Abstract
 
-AI-assisted coding can accelerate embedded software development, but most current systems remain too open-ended for production engineering. They often regenerate too much code, hide important changes, ignore hardware and interface constraints, and fail to provide the visibility needed for engineers to review, validate, and modify the result.
+AI-assisted coding can speed up embedded development, but most tools are too loose for real engineering work.
 
-AICS establishes a controlled framework for constrained, auditable, and engineer-visible AI-assisted code generation and modification. It uses explicit constraints, diff-based changes, validation loops, execution feedback, and recoverable project states to keep generated code aligned with embedded engineering requirements.
+Common problems:
+
+- too much code regenerated at once
+- changes hidden from the engineer
+- hardware constraints ignored
+- no clear rollback or recovery path
+
+AICS defines a controlled system for AI-assisted coding that keeps:
+
+- changes visible
+- results testable
+- projects recoverable
 
 * * *
 
 ## 1. Core System Model
 
-AICS should preserve:
+AICS preserves:
 
-* file-scoped operation
-* diff-based change visibility
-* validation as part of generation
-* engineer-visible logs and reports
-* recoverable project states
-* clear promotion and rollback rules
+- file-level control over changes
+- diff-based visibility
+- validation during generation
+- logs and reports for engineers
+- structured project states
 
-If you can’t see the change, you can’t trust the change.
+If you cannot see the change, you cannot trust the change.
 
 * * *
 
 ## 2. Restore Points
 
-AICS should establish explicit restore points such as:
+AICS defines explicit project states:
 
-* **golden** - known good promoted baseline
-* **working** - active editable state
-* **candidate** - newly generated state pending validation
-* **failsafe** - rollback-safe fallback state
-* **recovery** - most recent restorable stable state
+- **golden** - known good baseline  
+- **working** - active editable state  
+- **candidate** - generated state pending validation  
+- **failsafe** - rollback-safe fallback  
+- **recovery** - last stable restore point  
 
-Skipping state control is where things break.
-
-* * *
-
-## 3. Relationship to Other Repositories
-
-* [EmbeddedX-Specs](https://github.com/telespial/EmbeddedX-Specs) establishes the umbrella platform
-* [Machine-Readable-Datasheets-Specs](https://github.com/telespial/Machine-Readable-Datasheets-Specs) establishes hardware truth
-* [Machine-Readable-Connectivity-Specs](https://github.com/telespial/Machine-Readable-Connectivity-Specs) may help generate board-aware code, initialization, warnings, checks, validation steps, and driver scaffolding
-* [Model-Definition-Package-Specs](https://github.com/telespial/Model-Definition-Package-Specs) establishes model truth
-* [Embedded-Intelligence-Layer-Specs](https://github.com/telespial/Embedded-Intelligence-Layer-Specs) establishes runtime integration boundaries
-* [Embedded-Intelligence-Package-Specs](https://github.com/telespial/Embedded-Intelligence-Package-Specs) may package artifacts produced under AICS-controlled workflows
+These states prevent projects from drifting or breaking silently.
 
 * * *
 
-## 4. Core Principle
+## 3. Why AICS Matters
 
-AI-assisted coding should behave like a controlled engineering system, not a free-form text generator.
+Embedded projects depend on:
+
+- datasheets
+- schematics
+- netlists
+- board files
+- firmware structure
+
+AI must respect these constraints.
+
+AICS ensures generated code:
+
+- matches hardware reality
+- follows project rules
+- stays reviewable by engineers
+
+* * *
+
+## 4. Relationship to Other Repositories
+
+- EmbeddedX-Specs: umbrella platform  
+- Machine-Readable-Datasheets-Specs: describes hardware capability  
+- Machine-Readable-Connectivity-Specs: enables board-aware code generation  
+- Model-Definition-Package-Specs: defines model behavior  
+- Embedded-Intelligence-Layer-Specs: defines runtime boundaries  
+- Embedded-Intelligence-Package-Specs: packages generated outputs  
+
+* * *
+
+## 5. Core Principle
+
+AI-assisted coding should act like a controlled engineering workflow.
+
+Every change should be:
+
+- visible  
+- testable  
+- reversible  
 
 * * *
 
