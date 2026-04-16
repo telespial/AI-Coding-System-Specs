@@ -1,3 +1,3 @@
 # AICS Interoperability
 
-AICS should treat MRD as hardware truth, MDP as model truth, and EIL as runtime truth.
+AICS should treat MRD as the hardware reference, MDP as the model reference, and EIL as the runtime reference.

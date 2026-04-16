@@ -1,6 +1,6 @@
 # AI Integrated Coding System (AICS)
 
-## A Structured, Reviewable Framework for AI-Assisted Code Generation in Embedded Systems
+## Controls for Reviewable AI-Assisted Code Generation
 
 Proposed by: Richard Haberkern  
 Contact: rmhaberkern@gmail.com
@@ -15,7 +15,7 @@ Part of the [EmbeddedX platform](https://github.com/telespial/EmbeddedX-Specs).
 
 AI-assisted coding can accelerate embedded software development, but most current systems remain too open-ended for production engineering. They often regenerate too much code, hide important changes, ignore hardware and interface constraints, and fail to provide the visibility needed for engineers to review, validate, and modify the result.
 
-AICS establishes a controlled framework for constrained, auditable, and engineer-visible AI-assisted code generation and modification. It uses explicit constraints, diff-based changes, validation loops, execution feedback, and recoverable project states to keep generated code aligned with embedded engineering requirements.
+AICS defines a controlled framework for AI-assisted code generation and modification. It uses explicit constraints, diff-based changes, validation loops, execution feedback, and recoverable project states so generated code stays reviewable and aligned with embedded engineering requirements.
 
 * * *
 
@@ -51,9 +51,9 @@ Skipping state control is where things break.
 ## 3. Relationship to Other Repositories
 
 * [EmbeddedX-Specs](https://github.com/telespial/EmbeddedX-Specs) establishes the umbrella platform
-* [Machine-Readable-Datasheets-Specs](https://github.com/telespial/Machine-Readable-Datasheets-Specs) establishes hardware truth
+* [Machine-Readable-Datasheets-Specs](https://github.com/telespial/Machine-Readable-Datasheets-Specs) defines hardware capabilities visible to firmware
 * [Machine-Readable-Connectivity-Specs](https://github.com/telespial/Machine-Readable-Connectivity-Specs) may help generate board-aware code, initialization, warnings, checks, validation steps, and driver scaffolding
-* [Model-Definition-Package-Specs](https://github.com/telespial/Model-Definition-Package-Specs) establishes model truth
+* [Model-Definition-Package-Specs](https://github.com/telespial/Model-Definition-Package-Specs) defines model metadata and runtime assumptions
 * [Embedded-Intelligence-Layer-Specs](https://github.com/telespial/Embedded-Intelligence-Layer-Specs) establishes runtime integration boundaries
 * [Embedded-Intelligence-Package-Specs](https://github.com/telespial/Embedded-Intelligence-Package-Specs) may package artifacts produced under AICS-controlled workflows
 
