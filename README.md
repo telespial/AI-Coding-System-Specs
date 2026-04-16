@@ -1,5 +1,7 @@
 # AI Integrated Coding System (AICS)
 
+[← Back to EmbeddedX-Specs (canonical index)](https://github.com/telespial/EmbeddedX-Specs)
+
 ## Controls for Reviewable AI-Assisted Code Generation
 
 Proposed by: Richard Haberkern  
