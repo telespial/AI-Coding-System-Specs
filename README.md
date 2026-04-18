@@ -72,4 +72,4 @@ AI-assisted coding should behave like a controlled engineering system, not a fre
 
 ## License
 
-See [LICENSE.md](./LICENSE.md).
+See [LICENSE.md](./LICENSE.md)
